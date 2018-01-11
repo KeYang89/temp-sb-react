@@ -14,20 +14,20 @@ module.exports = function (env) {
     new webpack.optimize.OccurrenceOrderPlugin()
   ];
 
-  // if (env === 'production') {
-  //   plugins.push(new webpack.optimize.UglifyJsPlugin(
-  //     {
-  //       minimize: true,
-  //       compress: {
-  //         warnings: false
-  //       },
-  //       mangle: true
-  //     }
-  //   ));
-  //   outputFile = libraryName.toLowerCase() + '.min.js';
-  // } else {
+  if (env === 'production') {
+    plugins.push(new webpack.optimize.UglifyJsPlugin(
+      {
+        minimize: true,
+        compress: {
+          warnings: false
+        },
+        mangle: true
+      }
+    ));
+    outputFile = libraryName.toLowerCase() + '.min.js';
+  } else {
     outputFile = libraryName.toLowerCase() + '.js';
-  //}
+  }
 
   const config = {
     devtool: 'source-map',
