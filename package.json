@@ -21,7 +21,6 @@
   },
   "scripts": {
      "build": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors",
-    //"build": "webpack",
     "start": "webpack-dev-server --config ./webpack.dev.config.js --watch --open",
     "test": "eslint **/*.js"
   },
