@@ -20,8 +20,8 @@
     "react-toastify": "^3.1.0"
   },
   "scripts": {
-     "build": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors",
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --watch --open",
+    "start": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors",
+    //"start": "webpack-dev-server --config ./webpack.dev.config.js --watch --open",
     "test": "eslint **/*.js"
   },
   "devDependencies": {
